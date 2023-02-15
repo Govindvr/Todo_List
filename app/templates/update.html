@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+
+{% block head %}
+<title>Task Manager</title>
+{% endblock %}
+
+{% block body %}
+<div class="row">
+    <h1 class="text-center"> Task Manager</h1>
+</div>
+<br>
+<div class="container">
+
+    <div class="row">
+        <div class="col-12 align-self-center">
+            <form action="/update/{{task.id}}" method="POST">
+                <input type="text" class="form-control" id="content" name="content" placeholder="Add you task here" value="{{task.content}}">
+                <input type="Submit" class="form-control" value="Update">
+            </form>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
